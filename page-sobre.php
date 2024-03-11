@@ -13,8 +13,12 @@
 	</div>
 
 	<div class="grid-8">
-		<h2><?php the_field('titulo_historia'); ?></h2>
-		<?php the_field('texto_da_historia'); ?>
+		
+
+		<?php if(have_rows('conteudo_sobre')): while(have_rows('conteudo_sobre')) : the_row (); ?>
+		<h2><?php the_sub_field('titulo_sobre'); ?></h2>
+		<?php the_sub_field('texto_sobre'); ?>
+		<?php endwhile; else : endif; ?>
 		<h2>Visão</h2>
 		<p>Não obstante, a expansão dos mercados mundiais faz parte de um processo de gerenciamento de alternativas às soluções ortodoxas.</p>
 		<h2>Valores</h2>
