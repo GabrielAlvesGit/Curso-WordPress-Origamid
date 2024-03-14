@@ -3,7 +3,10 @@
 	<head>
   <meta charset="utf-8">
   <!-- Título do site WordPress -->
-  <title><?php bloginfo('name'); ?></title>
+  <title><?php bloginfo('name'); ?> | <?php wp_title(''); ?> - <?php echo get_field('title_seo'); ?></title>
+
+  <meta name="description" content="<?php bloginfo('name'); ?> | <?php wp_title(''); ?> <?php echo get_field('description_seo'); ?>">
+
 
   <link href='https://fonts.googleapis.com/css?family=Alegreya+SC' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
